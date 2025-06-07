@@ -1,6 +1,7 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Play } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
@@ -22,7 +23,7 @@ const HeroSection = () => {
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
                 Marketing auf 
                 <span className="gradient-text"> Autopilot </span>
-                für Ihr KMU
+                – ohne eigenes Team.
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
                 Unsere KI-Agenten erstellen, planen und veröffentlichen Ihren Content – 
@@ -30,14 +31,29 @@ const HeroSection = () => {
               </p>
             </div>
             
-            <div className="space-y-4">
-              <Button 
-                onClick={() => scrollToSection('beta-signup')}
-                className="bg-aigentzy-medium-blue hover:bg-aigentzy-deep-violet text-white px-8 py-4 text-lg rounded-full transition-all-smooth shadow-lg hover:shadow-xl transform hover:scale-105"
-              >
-                Kostenlosen Frühzugang sichern
-              </Button>
-              <p className="text-sm text-gray-500">Keine Kreditkarte nötig</p>
+            <div className="space-y-6">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  onClick={() => scrollToSection('beta-signup')}
+                  className="bg-aigentzy-medium-blue hover:bg-aigentzy-deep-violet text-white px-8 py-4 text-lg rounded-full transition-all-smooth shadow-lg hover:shadow-xl transform hover:scale-105"
+                >
+                  Kostenlosen Frühzugang sichern
+                </Button>
+                <Button 
+                  variant="outline"
+                  className="border-aigentzy-medium-blue text-aigentzy-medium-blue hover:bg-aigentzy-medium-blue hover:text-white px-8 py-4 text-lg rounded-full transition-all-smooth"
+                >
+                  <Play className="w-5 h-5 mr-2" />
+                  2-Min-Demo ansehen
+                </Button>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                <p className="text-sm text-gray-500">Keine Kreditkarte nötig</p>
+                <Badge className="bg-aigentzy-light-violet text-aigentzy-deep-violet border-none">
+                  DSGVO-konform 🇩🇪🇦🇹🇨🇭
+                </Badge>
+              </div>
             </div>
           </div>
           

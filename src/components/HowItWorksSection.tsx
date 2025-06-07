@@ -1,22 +1,22 @@
 
-import { FileText, User, Check } from 'lucide-react';
+import { Clipboard, Bot, Rocket } from 'lucide-react';
 
 const HowItWorksSection = () => {
   const steps = [
     {
-      icon: FileText,
+      icon: Clipboard,
       step: "1",
       title: "Kurzfragebogen ausfüllen (3 Min.)",
       description: "Teilen Sie uns Ihre Zielgruppe, Branche und Marketing-Ziele mit"
     },
     {
-      icon: User,
+      icon: Bot,
       step: "2", 
       title: "KI-Agenten bauen Kampagne & Visuals",
       description: "Unsere KI erstellt maßgeschneiderte Inhalte und ansprechende Grafiken"
     },
     {
-      icon: Check,
+      icon: Rocket,
       step: "3",
       title: "Ein Klick – alles live auf Ihren Kanälen",
       description: "Automatische Veröffentlichung zur optimalen Zeit auf allen Plattformen"

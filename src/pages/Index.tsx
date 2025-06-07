@@ -5,10 +5,12 @@ import TrustSection from '@/components/TrustSection';
 import BenefitsSection from '@/components/BenefitsSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import FeaturesSection from '@/components/FeaturesSection';
+import CaseStudySection from '@/components/CaseStudySection';
 import TestimonialSection from '@/components/TestimonialSection';
 import FAQSection from '@/components/FAQSection';
 import FinalCTASection from '@/components/FinalCTASection';
 import Footer from '@/components/Footer';
+import ExitIntentPopup from '@/components/ExitIntentPopup';
 
 const Index = () => {
   return (
@@ -19,10 +21,12 @@ const Index = () => {
       <BenefitsSection />
       <HowItWorksSection />
       <FeaturesSection />
+      <CaseStudySection />
       <TestimonialSection />
       <FAQSection />
       <FinalCTASection />
       <Footer />
+      <ExitIntentPopup />
     </div>
   );
 };

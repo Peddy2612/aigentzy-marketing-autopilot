@@ -52,6 +52,14 @@ const FeaturesSection = () => {
                     <p className="text-gray-600">{feature.description}</p>
                   </div>
                   
+                  {/* Screenshot placeholder */}
+                  <div className="aspect-video bg-gray-50 border-2 border-dashed border-aigentzy-neutral-gray rounded-xl flex items-center justify-center">
+                    <div className="text-center space-y-2">
+                      <div className="w-8 h-8 bg-aigentzy-neutral-gray rounded-lg mx-auto"></div>
+                      <p className="text-sm text-gray-500">Screenshot Preview</p>
+                    </div>
+                  </div>
+                  
                   <div className="space-y-2">
                     {feature.highlights.map((highlight, idx) => (
                       <div key={idx} className="flex items-center space-x-2">

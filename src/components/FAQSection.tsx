@@ -4,12 +4,12 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 const FAQSection = () => {
   const faqs = [
     {
-      question: "Ist Aigentzy DSGVO-konform?",
-      answer: "Ja, absolut. Alle Daten werden auf deutschen Servern gespeichert und verarbeitet. Wir halten uns strikt an die DSGVO-Richtlinien und geben keine Daten an Dritte weiter."
+      question: "Wo liegen Ihre Server?",
+      answer: "In deutschen und europäischen Rechenzentren – vollständig DSGVO-konform. Alle Daten werden ausschließlich in Deutschland und der EU verarbeitet und gespeichert."
     },
     {
-      question: "Was kostet Aigentzy nach der Beta-Phase?",
-      answer: "Unsere Preise starten bei 49€/Monat für kleine Unternehmen. Während der Beta-Phase erhalten Sie 3 Monate kostenlos und anschließend 50% Rabatt für die ersten 6 Monate."
+      question: "Was kostet Aigentzy nach der Beta?",
+      answer: "Ab 99€/Monat, alle Funktionen – keine Zusatzkosten pro Agent. Während der Beta-Phase erhalten Sie 3 Monate kostenlos und anschließend 50% Rabatt für die ersten 6 Monate."
     },
     {
       question: "Welche Social Media Kanäle werden unterstützt?",

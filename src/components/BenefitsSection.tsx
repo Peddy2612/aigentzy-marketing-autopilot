@@ -1,22 +1,22 @@
 
-import { Clock, User, ArrowUp } from 'lucide-react';
+import { Unlink, Clock, Brain } from 'lucide-react';
 
 const BenefitsSection = () => {
   const benefits = [
     {
+      icon: Unlink,
+      title: "Keine Agentur-Fesseln mehr",
+      description: "Unabhängigkeit von teuren Agenturen und langfristigen Verträgen"
+    },
+    {
       icon: Clock,
-      title: "Spart bis zu 10 Stunden pro Woche",
-      description: "Automatisierte Content-Erstellung und -Planung reduziert Ihren Zeitaufwand drastisch"
+      title: "Planung in 3 Minuten erledigt",
+      description: "Komplette Content-Strategie wird automatisch erstellt und optimiert"
     },
     {
-      icon: User,
-      title: "Posten Sie jeden Tag, ohne Marketingteam",
-      description: "Konsistente Präsenz auf allen Kanälen ohne zusätzliche Personalkosten"
-    },
-    {
-      icon: ArrowUp,
-      title: "Messbarer Umsatzschub durch datengetriebene KI",
-      description: "Optimierte Kampagnen basierend auf echten Zielgruppen-Insights"
+      icon: Brain,
+      title: "KI lernt Ihre Branche",
+      description: "Maßgeschneiderte Inhalte basierend auf Ihrem Fachgebiet und Zielgruppe"
     }
   ];
 
@@ -39,7 +39,7 @@ const BenefitsSection = () => {
                 key={index}
                 className="bg-gray-50 rounded-2xl p-8 text-center space-y-4 transition-all-smooth hover:shadow-lg hover:scale-105"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-aigentzy-medium-blue to-aigentzy-deep-violet rounded-2xl flex items-center justify-center mx-auto">
+                <div className="w-16 h-16 bg-aigentzy-deep-violet rounded-2xl flex items-center justify-center mx-auto">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold">{benefit.title}</h3>
