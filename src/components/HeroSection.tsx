@@ -21,13 +21,12 @@ const HeroSection = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                Marketing auf 
-                <span className="gradient-text"> Autopilot </span>
-                – ohne eigenes Team.
+                Marketing-Autopilot statt 
+                <span className="gradient-text"> Marketing-Agentur.</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
                 Unsere KI-Agenten erstellen, planen und veröffentlichen Ihren Content – 
-                in Minuten statt Tagen.
+                in Minuten statt Tagen, ab 99 €/Monat.
               </p>
             </div>
             
@@ -35,30 +34,29 @@ const HeroSection = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   onClick={() => scrollToSection('beta-signup')}
-                  className="bg-aigentzy-medium-blue hover:bg-aigentzy-deep-violet text-white px-8 py-4 text-lg rounded-full transition-all-smooth shadow-lg hover:shadow-xl transform hover:scale-105"
+                  className="bg-aigentzy-medium-blue hover:bg-aigentzy-deep-violet text-white px-8 py-4 text-lg rounded-lg transition-all-smooth shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
-                  Kostenlosen Frühzugang sichern
+                  Beta-Platz sichern
                 </Button>
                 <Button 
                   variant="outline"
-                  className="border-aigentzy-medium-blue text-aigentzy-medium-blue hover:bg-aigentzy-medium-blue hover:text-white px-8 py-4 text-lg rounded-full transition-all-smooth"
+                  className="border-aigentzy-deep-violet text-aigentzy-deep-violet hover:bg-aigentzy-deep-violet hover:text-white px-8 py-4 text-lg rounded-lg transition-all-smooth"
                 >
                   <Play className="w-5 h-5 mr-2" />
-                  2-Min-Demo ansehen
+                  2-Minuten-Demo ansehen
                 </Button>
               </div>
               
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-                <p className="text-sm text-gray-500">Keine Kreditkarte nötig</p>
                 <Badge className="bg-aigentzy-light-violet text-aigentzy-deep-violet border-none">
-                  DSGVO-konform 🇩🇪🇦🇹🇨🇭
+                  DSGVO-konform 🇩🇪🇦🇹🇨🇭 · Server in der EU
                 </Badge>
               </div>
             </div>
           </div>
           
           <div className="relative animate-float">
-            <div className="bg-white rounded-2xl shadow-2xl p-6 border border-gray-100">
+            <div className="bg-white rounded-xl shadow-2xl p-6 border border-gray-100">
               <div className="aspect-video bg-gradient-to-br from-aigentzy-light-violet to-aigentzy-medium-blue/20 rounded-xl flex items-center justify-center">
                 <div className="text-center space-y-3">
                   <div className="w-16 h-16 bg-aigentzy-deep-violet/20 rounded-full flex items-center justify-center mx-auto">

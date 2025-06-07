@@ -6,20 +6,17 @@ const FeaturesSection = () => {
     {
       icon: FileText,
       title: "Content-Generator",
-      description: "KI erstellt automatisch Posts, Artikel und Stories basierend auf Ihren Unternehmensdaten",
-      highlights: ["Blog-Artikel", "Social Media Posts", "Newsletter-Inhalte"]
+      description: "Posts + Bilder automatisch."
     },
     {
       icon: User,
-      title: "Blueprint-Builder", 
-      description: "Individuelle Marketing-Strategien entwickelt speziell für Ihre Branche und Zielgruppe",
-      highlights: ["Zielgruppen-Analyse", "Content-Kalender", "Kanal-Optimierung"]
+      title: "Blueprint-Architect", 
+      description: "6-seitiger Wachstumsplan als PDF."
     },
     {
       icon: Search,
-      title: "Kampagnen-Analyse (HyperTarget)",
-      description: "Datengetriebene Insights und Optimierungen für maximale Reichweite und Conversion",
-      highlights: ["Performance-Tracking", "A/B-Testing", "ROI-Optimierung"]
+      title: "HyperTarget Analytics",
+      description: "Live-KPIs & AI-Tipps."
     }
   ];
 
@@ -29,7 +26,7 @@ const FeaturesSection = () => {
         <div className="text-center space-y-16">
           <div className="space-y-4">
             <h2 className="text-4xl font-bold">
-              Kraftvolle <span className="gradient-text">Features</span>
+              Ihre <span className="gradient-text">KI-Agenten</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Alles was Sie für erfolgreiches Marketing brauchen, in einer Plattform
@@ -58,15 +55,6 @@ const FeaturesSection = () => {
                       <div className="w-8 h-8 bg-aigentzy-neutral-gray rounded-lg mx-auto"></div>
                       <p className="text-sm text-gray-500">Screenshot Preview</p>
                     </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    {feature.highlights.map((highlight, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-aigentzy-deep-violet rounded-full"></div>
-                        <span className="text-sm text-gray-700">{highlight}</span>
-                      </div>
-                    ))}
                   </div>
                 </div>
               </div>

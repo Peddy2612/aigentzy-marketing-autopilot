@@ -1,22 +1,22 @@
 
-import { Unlink, Clock, Brain } from 'lucide-react';
+import { Lock, Clock, Brain } from 'lucide-react';
 
 const BenefitsSection = () => {
   const benefits = [
     {
-      icon: Unlink,
-      title: "Keine Agentur-Fesseln mehr",
-      description: "Unabhängigkeit von teuren Agenturen und langfristigen Verträgen"
+      icon: Lock,
+      title: "Keine Agentur-Fesseln",
+      description: "Volle Kontrolle, null versteckte Kosten."
     },
     {
       icon: Clock,
-      title: "Planung in 3 Minuten erledigt",
-      description: "Komplette Content-Strategie wird automatisch erstellt und optimiert"
+      title: "10 h/Woche gespart",
+      description: "Automatisierte Content-Pipelines statt Handarbeit."
     },
     {
       icon: Brain,
       title: "KI lernt Ihre Branche",
-      description: "Maßgeschneiderte Inhalte basierend auf Ihrem Fachgebiet und Zielgruppe"
+      description: "Agenten passen Inhalte laufend an Ihre Zielgruppe an."
     }
   ];
 
@@ -26,7 +26,7 @@ const BenefitsSection = () => {
         <div className="text-center space-y-16">
           <div className="space-y-4">
             <h2 className="text-4xl font-bold">
-              Warum <span className="gradient-text">KMUs</span> Aigentzy lieben
+              Warum <span className="gradient-text">AIgentzy?</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Mehr Zeit für Ihr Geschäft, weniger Zeit für Marketing-Aufgaben

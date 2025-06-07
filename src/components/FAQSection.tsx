@@ -5,19 +5,19 @@ const FAQSection = () => {
   const faqs = [
     {
       question: "Wo liegen Ihre Server?",
-      answer: "In deutschen und europäischen Rechenzentren – vollständig DSGVO-konform. Alle Daten werden ausschließlich in Deutschland und der EU verarbeitet und gespeichert."
+      answer: "In deutschen & EU-Rechenzentren (ISO-27001), vollständig DSGVO-konform."
     },
     {
-      question: "Was kostet Aigentzy nach der Beta?",
-      answer: "Ab 99€/Monat, alle Funktionen – keine Zusatzkosten pro Agent. Während der Beta-Phase erhalten Sie 3 Monate kostenlos und anschließend 50% Rabatt für die ersten 6 Monate."
+      question: "Was kostet AIgentzy nach der Beta?",
+      answer: "Launch-Preis ab 99 €/Monat, alles inklusive."
     },
     {
-      question: "Welche Social Media Kanäle werden unterstützt?",
-      answer: "Aktuell unterstützen wir Facebook, Instagram, LinkedIn, Twitter und Google My Business. Weitere Plattformen wie TikTok und YouTube sind in Planung."
+      question: "Welche Netzwerke werden unterstützt?",
+      answer: "LinkedIn, X, Instagram, Facebook; TikTok & Shopify folgen."
     },
     {
-      question: "Wie schnell erhalte ich Support?",
-      answer: "Unser deutschsprachiger Support antwortet innerhalb von 2 Stunden während der Geschäftszeiten (Mo-Fr 9-18 Uhr). Beta-Nutzer erhalten bevorzugten Support."
+      question: "Kann ich jederzeit kündigen?",
+      answer: "Ja, monatliche Laufzeit, 1-Klick-Kündigung im Dashboard."
     }
   ];
 
@@ -30,7 +30,7 @@ const FAQSection = () => {
               Häufige <span className="gradient-text">Fragen</span>
             </h2>
             <p className="text-xl text-gray-600">
-              Alles was Sie über Aigentzy wissen müssen
+              Alles was Sie über AIgentzy wissen müssen
             </p>
           </div>
           
