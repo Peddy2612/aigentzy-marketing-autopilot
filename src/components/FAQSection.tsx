@@ -8,7 +8,7 @@ const FAQSection = () => {
       answer: "In deutschen & EU-Rechenzentren (ISO-27001), vollständig DSGVO-konform."
     },
     {
-      question: "Was kostet AIgentzy nach der Beta?",
+      question: "Was kostet AIgentzy nach dem Early Access?",
       answer: "Launch-Preis ab 99 €/Monat, alles inklusive."
     },
     {
@@ -25,10 +25,8 @@ const FAQSection = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center space-y-8 mb-16">
-            <h2 className="text-4xl font-bold">
-              Häufige <span className="gradient-text">Fragen</span>
-            </h2>
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-4xl font-bold">Häufige Fragen</h2>
             <p className="text-xl text-gray-600">
               Alles was Sie über AIgentzy wissen müssen
             </p>
@@ -41,10 +39,10 @@ const FAQSection = () => {
                 value={`item-${index}`}
                 className="bg-gray-50 rounded-2xl px-6 border-none"
               >
-                <AccordionTrigger className="text-left font-semibold text-lg hover:no-underline py-6">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline py-6">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-600 pb-6 text-base leading-relaxed">
+                <AccordionContent className="text-gray-600 pb-6">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

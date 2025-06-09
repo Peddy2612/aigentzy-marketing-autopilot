@@ -33,10 +33,10 @@ const HeroSection = () => {
             <div className="space-y-6">
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
-                  onClick={() => scrollToSection('beta-signup')}
+                  onClick={() => scrollToSection('early-access-signup')}
                   className="bg-aigentzy-medium-blue hover:bg-aigentzy-deep-violet text-white px-8 py-4 text-lg rounded-lg transition-all-smooth shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
-                  Beta-Platz sichern
+                  Early Access-Platz sichern
                 </Button>
                 <Button 
                   variant="outline"

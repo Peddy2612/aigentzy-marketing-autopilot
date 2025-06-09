@@ -43,7 +43,7 @@ const ExitIntentPopup = () => {
         
         <div className="space-y-4">
           <p className="text-center text-gray-600">
-            PDF + Beta-Einladung per E-Mail
+            PDF + Early Access-Einladung per E-Mail
           </p>
           
           <form onSubmit={handleSubmit} className="space-y-3">
@@ -59,7 +59,7 @@ const ExitIntentPopup = () => {
               type="submit"
               className="w-full bg-aigentzy-deep-violet hover:bg-aigentzy-medium-blue text-white transition-all-smooth"
             >
-              PDF herunterladen & Beta beitreten
+              PDF herunterladen & Early Access beitreten
             </Button>
           </form>
           

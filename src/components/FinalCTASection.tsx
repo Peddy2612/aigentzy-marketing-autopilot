@@ -10,12 +10,12 @@ const FinalCTASection = () => {
     e.preventDefault();
     // Hier würde normalerweise das Typeform-Popup geöffnet oder zur Warteliste hinzugefügt
     console.log('Email submitted:', email);
-    alert('Vielen Dank! Sie wurden zur Beta-Warteliste hinzugefügt.');
+    alert('Vielen Dank! Sie wurden zur Early Access-Warteliste hinzugefügt.');
     setEmail('');
   };
 
   return (
-    <section id="beta-signup" className="py-20 bg-gradient-to-br from-aigentzy-medium-blue via-aigentzy-deep-violet to-aigentzy-light-violet">
+    <section id="early-access-signup" className="py-20 bg-gradient-to-br from-aigentzy-medium-blue via-aigentzy-deep-violet to-aigentzy-light-violet">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center text-white">
           <div className="space-y-8">
@@ -24,7 +24,7 @@ const FinalCTASection = () => {
             </h2>
             <p className="text-xl opacity-90 max-w-2xl mx-auto">
               Schließen Sie sich über 500 Unternehmen an, die bereits auf der Warteliste stehen. 
-              Sichern Sie sich jetzt Ihren kostenlosen Beta-Zugang.
+              Sichern Sie sich jetzt Ihren kostenlosen Early Access-Zugang.
             </p>
             
             <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -41,7 +41,7 @@ const FinalCTASection = () => {
                   type="submit"
                   className="bg-white text-aigentzy-deep-violet hover:bg-gray-100 px-8 py-4 text-lg rounded-full font-semibold transition-all-smooth shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
-                  Jetzt Beta-Einladung holen
+                  Jetzt Early Access-Einladung holen
                 </Button>
               </div>
             </form>
@@ -49,7 +49,7 @@ const FinalCTASection = () => {
             <div className="flex items-center justify-center space-x-8 text-sm opacity-75">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-white rounded-full"></div>
-                <span>Kostenlose Beta</span>
+                <span>Kostenloser Early Access</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-white rounded-full"></div>
