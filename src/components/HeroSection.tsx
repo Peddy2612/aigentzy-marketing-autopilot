@@ -24,7 +24,7 @@ const HeroSection = () => {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-white">
       {/* Subtle animated background gradient */}
       <motion.div 
-        className="absolute inset-0 opacity-30"
+        className="absolute inset-0 opacity-20"
         animate={{ 
           background: [
             "radial-gradient(circle at 20% 20%, rgba(201, 202, 250, 0.3) 0%, transparent 50%)",
@@ -32,86 +32,104 @@ const HeroSection = () => {
             "radial-gradient(circle at 50% 50%, rgba(105, 77, 251, 0.2) 0%, transparent 50%)"
           ]
         }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
       />
       
-      <div className="container mx-auto px-4 relative z-10 text-center">
-        <div className="space-y-20">
-          {/* Main headline with Apple-style entrance */}
+      <div className="container mx-auto px-6 relative z-10 text-center">
+        <div className="max-w-4xl mx-auto space-y-12">
+          {/* Fokussierte Headline */}
           <motion.div 
-            className="space-y-12"
+            className="space-y-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
           >
             <motion.h1 
-              className="text-6xl lg:text-8xl xl:text-9xl font-bold text-aigentzy-deep-violet leading-[1.1] tracking-tight max-w-6xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-aigentzy-deep-violet leading-tight tracking-tight"
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
-              Marketing.
-              <br />
-              <span className="bg-gradient-to-r from-aigentzy-medium-blue to-aigentzy-deep-violet bg-clip-text text-transparent">
-                Neu gedacht.
-              </span>
+              Marketing. Endlich automatisiert.
             </motion.h1>
             
             <motion.p 
-              className="text-xl lg:text-2xl xl:text-3xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light px-4"
-              initial={{ opacity: 0, y: 20 }}
+              className="text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed font-normal max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
             >
-              Aigentzy ist dein neuer Growth-Agent – powered by echten KI-Agenten.
+              Aigentzy denkt mit, plant vor und liefert Content, der wirkt.
             </motion.p>
           </motion.div>
           
-          {/* Product visualization with elegant design */}
+          {/* CTA Button */}
           <motion.div 
-            className="relative max-w-5xl mx-auto"
-            initial={{ opacity: 0, scale: 0.8, y: 100 }}
+            className="pt-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+          >
+            <motion.div
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Button 
+                onClick={() => scrollToSection('demo-section')}
+                className="bg-aigentzy-medium-blue hover:bg-blue-600 text-white px-8 md:px-12 py-4 md:py-5 text-lg md:text-xl rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-aigentzy-medium-blue/25 w-full md:w-auto"
+              >
+                Beta sichern
+              </Button>
+            </motion.div>
+          </motion.div>
+
+          {/* Kompakte Produktvisualisierung */}
+          <motion.div 
+            className="pt-16 pb-8"
+            initial={{ opacity: 0, scale: 0.9, y: 40 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 1.5, delay: 1.2, ease: "easeOut" }}
-            style={{ transform: `translateY(${scrollY * 0.2}px)` }}
+            transition={{ duration: 1, delay: 1.2, ease: "easeOut" }}
+            style={{ transform: `translateY(${scrollY * 0.1}px)` }}
           >
             <motion.div 
-              className="bg-white rounded-3xl p-8 lg:p-12 shadow-2xl border border-gray-100 relative"
-              whileHover={{ scale: 1.02 }}
+              className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-gray-100 relative max-w-3xl mx-auto"
+              whileHover={{ scale: 1.02, y: -5 }}
               transition={{ duration: 0.3 }}
             >
               {/* Subtle glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-aigentzy-light-violet/20 to-aigentzy-medium-blue/20 rounded-3xl blur-xl opacity-50" />
+              <div className="absolute inset-0 bg-gradient-to-r from-aigentzy-light-violet/10 to-aigentzy-medium-blue/10 rounded-2xl blur-xl opacity-60" />
               
-              <div className="aspect-video bg-gradient-to-br from-aigentzy-light-violet/10 to-white rounded-2xl flex items-center justify-center relative overflow-hidden border border-gray-100">
-                <div className="text-center space-y-8">
+              <div className="aspect-video bg-gradient-to-br from-aigentzy-light-violet/5 to-white rounded-xl flex items-center justify-center relative overflow-hidden border border-gray-50">
+                <div className="text-center space-y-6">
                   <motion.div 
-                    className="w-24 h-24 lg:w-32 lg:h-32 bg-gradient-to-br from-aigentzy-medium-blue to-aigentzy-deep-violet rounded-3xl flex items-center justify-center mx-auto shadow-lg"
+                    className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-aigentzy-medium-blue to-aigentzy-deep-violet rounded-2xl flex items-center justify-center mx-auto shadow-lg"
                     animate={{ rotate: [0, 360] }}
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                   >
-                    <div className="w-12 h-12 lg:w-16 lg:h-16 bg-white rounded-2xl flex items-center justify-center">
-                      <span className="text-aigentzy-deep-violet font-bold text-xl lg:text-2xl">A</span>
+                    <div className="w-8 h-8 md:w-10 md:h-10 bg-white rounded-xl flex items-center justify-center">
+                      <span className="text-aigentzy-deep-violet font-bold text-lg md:text-xl">A</span>
                     </div>
                   </motion.div>
-                  <p className="text-aigentzy-deep-violet font-bold text-xl lg:text-2xl">AI Marketing Dashboard</p>
                   
-                  {/* Animated metrics showcase */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-2xl mx-auto">
+                  <p className="text-aigentzy-deep-violet font-semibold text-lg md:text-xl">KI Marketing Dashboard</p>
+                  
+                  {/* Kompakte Metriken */}
+                  <div className="grid grid-cols-3 gap-4 max-w-lg mx-auto">
                     {[
                       { label: "Content erstellt", value: "847" },
-                      { label: "Leads generiert", value: "+234" },
+                      { label: "Neue Leads", value: "+234" },
                       { label: "Zeit gespart", value: "12h" }
                     ].map((metric, i) => (
                       <motion.div 
                         key={metric.label}
-                        className="text-center p-4"
-                        initial={{ opacity: 0, y: 20 }}
+                        className="text-center"
+                        initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 2.5 + (i * 0.2) }}
+                        transition={{ duration: 0.5, delay: 2 + (i * 0.1) }}
                       >
-                        <div className="text-aigentzy-medium-blue font-bold text-2xl lg:text-3xl mb-2">{metric.value}</div>
-                        <div className="text-gray-600 text-sm lg:text-base">{metric.label}</div>
+                        <div className="text-aigentzy-medium-blue font-bold text-xl md:text-2xl mb-1">{metric.value}</div>
+                        <div className="text-gray-500 text-xs md:text-sm">{metric.label}</div>
                       </motion.div>
                     ))}
                   </div>
@@ -119,46 +137,35 @@ const HeroSection = () => {
               </div>
             </motion.div>
           </motion.div>
-          
-          {/* Apple-style CTA */}
+
+          {/* Value Proposition */}
           <motion.div 
-            className="space-y-8 pt-8"
-            initial={{ opacity: 0, y: 50 }}
+            className="pt-8"
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 2, ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 1.8, ease: "easeOut" }}
           >
-            <motion.div
-              whileHover={{ scale: 1.05, y: -5 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Button 
-                onClick={() => scrollToSection('demo-section')}
-                className="bg-aigentzy-medium-blue hover:bg-blue-600 text-white px-12 lg:px-16 py-4 lg:py-6 text-lg lg:text-2xl rounded-full font-semibold transition-all duration-300 shadow-2xl hover:shadow-aigentzy-medium-blue/25 relative group"
-              >
-                <Play className="w-5 h-5 lg:w-7 lg:h-7 mr-3 lg:mr-4" />
-                Demo ansehen
-                <div className="absolute inset-0 bg-white rounded-full opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-              </Button>
-            </motion.div>
+            <p className="text-base md:text-lg text-gray-500 font-medium max-w-2xl mx-auto">
+              Was Agenturen in Wochen tun, erledigt Aigentzy in Minuten.
+            </p>
           </motion.div>
         </div>
       </div>
       
-      {/* Elegant scroll indicator */}
+      {/* Eleganter Scroll-Indikator */}
       <motion.div 
-        className="absolute bottom-8 lg:bottom-12 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 3 }}
+        transition={{ duration: 1, delay: 2.5 }}
       >
         <motion.div 
-          className="w-6 h-12 border-2 border-aigentzy-deep-violet/30 rounded-full flex justify-center"
-          animate={{ y: [0, 10, 0] }}
+          className="w-5 h-10 border-2 border-aigentzy-deep-violet/20 rounded-full flex justify-center"
+          animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
           <motion.div 
-            className="w-1 h-4 bg-aigentzy-deep-violet rounded-full mt-2"
+            className="w-0.5 h-3 bg-aigentzy-deep-violet rounded-full mt-2"
             animate={{ scaleY: [1, 0.3, 1] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           />
