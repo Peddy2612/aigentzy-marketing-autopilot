@@ -1,7 +1,13 @@
 
 import { Clipboard, FileText, Bot, Rocket } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 const HowItWorksSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   const steps = [
     {
       icon: Clipboard,
@@ -29,41 +35,96 @@ const HowItWorksSection = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <section className="py-20 bg-gradient-to-br from-aigentzy-light-violet/20 to-white">
+    <section className="py-20 bg-gradient-to-br from-aigentzy-light-violet/20 to-white" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="text-center space-y-16">
-          <div className="space-y-4">
+          <motion.div 
+            className="space-y-4"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             <h2 className="text-4xl font-bold">
               So <span className="gradient-text">funktioniert's</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               In nur 4 einfachen Schritten zu professionellem Marketing-Autopilot
             </p>
-          </div>
+          </motion.div>
           
-          <div className="grid md:grid-cols-4 gap-8 relative">
+          <motion.div 
+            className="grid md:grid-cols-4 gap-8 relative"
+            variants={containerVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+          >
             {steps.map((step, index) => (
-              <div key={index} className="relative">
-                <div className="bg-white rounded-2xl p-6 text-center space-y-4 shadow-lg transition-all-smooth hover:shadow-xl">
+              <motion.div key={index} className="relative" variants={itemVariants}>
+                <motion.div 
+                  className="bg-white rounded-2xl p-6 text-center space-y-4 shadow-lg cursor-pointer"
+                  whileHover={{ 
+                    scale: 1.05, 
+                    y: -10,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.15)"
+                  }}
+                  transition={{ duration: 0.3 }}
+                >
                   <div className="relative">
-                    <div className="w-16 h-16 bg-aigentzy-medium-blue rounded-2xl flex items-center justify-center mx-auto">
+                    <motion.div 
+                      className="w-16 h-16 bg-aigentzy-medium-blue rounded-2xl flex items-center justify-center mx-auto"
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                    >
                       <step.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-aigentzy-medium-blue text-white rounded-full flex items-center justify-center text-sm font-bold">
+                    </motion.div>
+                    <motion.div 
+                      className="absolute -top-2 -right-2 w-8 h-8 bg-aigentzy-medium-blue text-white rounded-full flex items-center justify-center text-sm font-bold"
+                      animate={{ scale: [1, 1.1, 1] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
+                    >
                       {step.step}
-                    </div>
+                    </motion.div>
                   </div>
                   <h3 className="text-lg font-semibold">{step.title}</h3>
                   <p className="text-gray-600 text-sm">{step.description}</p>
-                </div>
+                </motion.div>
                 
                 {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 -right-4 transform w-8 h-0.5 bg-gray-300"></div>
+                  <motion.div 
+                    className="hidden md:block absolute top-8 -right-4 transform w-8 h-0.5 bg-gray-300"
+                    initial={{ scaleX: 0 }}
+                    animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+                    transition={{ duration: 0.8, delay: 0.5 + (index * 0.3) }}
+                  />
                 )}
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
