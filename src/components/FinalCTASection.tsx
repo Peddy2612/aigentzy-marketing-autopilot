@@ -14,7 +14,7 @@ const FinalCTASection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Email submitted:', email);
-    alert('Vielen Dank! Sie wurden zur Early Access-Warteliste hinzugefügt.');
+    alert('Perfekt! Du bist jetzt auf der Beta-Warteliste.');
     setEmail('');
   };
 
@@ -22,57 +22,56 @@ const FinalCTASection = () => {
     <section 
       id="early-access-signup" 
       ref={ref}
-      className="min-h-screen bg-gradient-to-br from-aigentzy-light-violet via-white to-aigentzy-medium-blue/20 flex items-center justify-center py-20 relative overflow-hidden"
+      className="min-h-screen bg-white flex items-center justify-center py-20 relative overflow-hidden"
     >
-      {/* Animated background elements */}
+      {/* Subtle animated background */}
       <motion.div 
-        className="absolute inset-0 opacity-30"
+        className="absolute inset-0 opacity-20"
         animate={{
           background: [
-            "radial-gradient(circle at 20% 20%, rgba(105, 77, 251, 0.3) 0%, transparent 50%)",
-            "radial-gradient(circle at 80% 80%, rgba(45, 135, 227, 0.3) 0%, transparent 50%)",
-            "radial-gradient(circle at 50% 50%, rgba(201, 202, 250, 0.3) 0%, transparent 50%)"
+            "radial-gradient(circle at 20% 20%, rgba(201, 202, 250, 0.3) 0%, transparent 50%)",
+            "radial-gradient(circle at 80% 80%, rgba(45, 135, 227, 0.2) 0%, transparent 50%)",
+            "radial-gradient(circle at 50% 50%, rgba(105, 77, 251, 0.2) 0%, transparent 50%)"
           ]
         }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
       />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="space-y-12">
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="space-y-16">
             <motion.div
               className="space-y-8"
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
-              <h2 className="text-5xl lg:text-7xl font-bold leading-tight">
-                Bereit für Ihr
+              <h2 className="text-6xl lg:text-8xl font-bold leading-tight text-aigentzy-deep-violet">
+                Jetzt ist dein
                 <br />
                 <span className="bg-gradient-to-r from-aigentzy-medium-blue to-aigentzy-deep-violet bg-clip-text text-transparent">
-                  Marketing-Upgrade?
+                  Marketing dran.
                 </span>
               </h2>
               
               <motion.p 
-                className="text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed"
+                className="text-2xl lg:text-3xl text-gray-700 max-w-4xl mx-auto leading-relaxed"
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
               >
-                Schließen Sie sich über 500 Unternehmen an, die bereits auf der Warteliste stehen. 
-                Sichern Sie sich jetzt Ihren kostenlosen Early Access-Zugang.
+                Schließe dich über 500 Unternehmen an, die bereits auf der Warteliste stehen.
               </motion.p>
             </motion.div>
             
             <motion.form 
               onSubmit={handleSubmit} 
-              className="max-w-2xl mx-auto"
+              className="max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 50, scale: 0.9 }}
               animate={isInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 50, scale: 0.9 }}
               transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
             >
-              <div className="bg-white/80 backdrop-blur-md rounded-2xl p-8 shadow-2xl border border-white/20">
+              <div className="bg-white rounded-3xl p-10 shadow-2xl border border-gray-100">
                 <div className="flex flex-col sm:flex-row gap-6">
                   <motion.div
                     className="flex-1"
@@ -81,11 +80,11 @@ const FinalCTASection = () => {
                   >
                     <Input
                       type="email"
-                      placeholder="Ihre E-Mail-Adresse"
+                      placeholder="Deine E-Mail-Adresse"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="px-6 py-4 text-lg rounded-xl border-gray-200 bg-white/90 text-gray-900 placeholder:text-gray-500 focus:bg-white focus:border-aigentzy-medium-blue transition-all duration-300 shadow-lg"
+                      className="px-8 py-6 text-xl rounded-2xl border-gray-200 bg-gray-50 text-gray-900 placeholder:text-gray-500 focus:bg-white focus:border-aigentzy-medium-blue transition-all duration-300 shadow-sm"
                     />
                   </motion.div>
                   <motion.div
@@ -94,25 +93,25 @@ const FinalCTASection = () => {
                   >
                     <Button 
                       type="submit"
-                      className="bg-gradient-to-r from-aigentzy-medium-blue to-aigentzy-deep-violet hover:from-aigentzy-deep-violet hover:to-aigentzy-medium-blue text-white px-8 py-4 text-lg rounded-xl font-semibold transition-all duration-300 shadow-2xl hover:shadow-aigentzy-medium-blue/25 whitespace-nowrap"
+                      className="bg-aigentzy-medium-blue hover:bg-blue-600 text-white px-12 py-6 text-xl rounded-2xl font-semibold transition-all duration-300 shadow-2xl hover:shadow-aigentzy-medium-blue/25 whitespace-nowrap"
                     >
-                      Jetzt Demo sichern
+                      Beta sichern
                     </Button>
                   </motion.div>
                 </div>
                 
                 <motion.div 
-                  className="mt-6 text-center"
+                  className="mt-8 text-center"
                   initial={{ opacity: 0 }}
                   animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                   transition={{ duration: 1, delay: 0.8 }}
                 >
-                  <p className="text-sm text-gray-600 mb-3">
-                    Early Access ist begrenzt. <span className="font-semibold text-aigentzy-deep-violet">83 Plätze noch verfügbar.</span>
+                  <p className="text-lg text-gray-600 mb-4">
+                    ⚡ <span className="font-semibold text-aigentzy-deep-violet">Nur 83 Plätze</span> in der Early Access Phase
                   </p>
                   
-                  <div className="flex items-center justify-center space-x-8 text-sm text-gray-500">
-                    {['Kostenloser Early Access', 'Keine Kreditkarte', 'DSGVO-konform'].map((text, i) => (
+                  <div className="flex items-center justify-center space-x-10 text-gray-500">
+                    {['Kostenloser Beta-Zugang', 'Keine Kreditkarte', 'DSGVO-konform'].map((text, i) => (
                       <motion.div 
                         key={text}
                         className="flex items-center space-x-2"
@@ -125,7 +124,7 @@ const FinalCTASection = () => {
                           animate={{ scale: [1, 1.3, 1] }}
                           transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 }}
                         />
-                        <span>{text}</span>
+                        <span className="text-sm font-medium">{text}</span>
                       </motion.div>
                     ))}
                   </div>
@@ -133,24 +132,24 @@ const FinalCTASection = () => {
               </div>
             </motion.form>
             
-            {/* Floating elements */}
+            {/* Floating decoration elements */}
             <motion.div 
-              className="absolute top-20 left-10 w-20 h-20 bg-aigentzy-light-violet/30 rounded-full blur-xl"
+              className="absolute top-20 left-10 w-24 h-24 bg-aigentzy-light-violet/20 rounded-full blur-xl"
               animate={{ 
-                y: [0, -30, 0],
-                x: [0, 20, 0],
-                scale: [1, 1.2, 1]
-              }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <motion.div 
-              className="absolute bottom-20 right-10 w-32 h-32 bg-aigentzy-deep-violet/20 rounded-full blur-xl"
-              animate={{ 
-                y: [0, 40, 0],
-                x: [0, -25, 0],
-                scale: [1, 0.8, 1]
+                y: [0, -40, 0],
+                x: [0, 30, 0],
+                scale: [1, 1.3, 1]
               }}
               transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <motion.div 
+              className="absolute bottom-20 right-10 w-32 h-32 bg-aigentzy-medium-blue/10 rounded-full blur-xl"
+              animate={{ 
+                y: [0, 50, 0],
+                x: [0, -40, 0],
+                scale: [1, 0.7, 1]
+              }}
+              transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
             />
           </div>
         </div>

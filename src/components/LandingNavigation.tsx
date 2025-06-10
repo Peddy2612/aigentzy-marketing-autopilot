@@ -40,7 +40,7 @@ const LandingNavigation = () => {
       {isVisible && (
         <motion.nav 
           className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-            isScrolled ? 'bg-black/80 backdrop-blur-xl border-b border-gray-800/50' : 'bg-transparent'
+            isScrolled ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200/50 shadow-lg' : 'bg-white/80 backdrop-blur-sm'
           }`}
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -59,15 +59,9 @@ const LandingNavigation = () => {
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.8 }}
                 >
-                  {/* Animated background */}
-                  <motion.div 
-                    className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"
-                    animate={{ rotate: [0, 360] }}
-                    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                  />
                   <span className="text-white font-bold text-lg relative z-10">A</span>
                 </motion.div>
-                <span className="text-2xl font-bold text-white">Aigentzy</span>
+                <span className="text-2xl font-bold text-aigentzy-deep-violet">Aigentzy</span>
               </motion.div>
               
               <motion.div
@@ -76,17 +70,9 @@ const LandingNavigation = () => {
               >
                 <Button 
                   onClick={() => scrollToSection('early-access-signup')} 
-                  className="bg-white text-black hover:bg-gray-100 px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-white/20 relative group overflow-hidden"
+                  className="bg-aigentzy-medium-blue hover:bg-blue-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-aigentzy-medium-blue/25"
                 >
-                  <motion.div 
-                    className="absolute inset-0 bg-gradient-to-r from-aigentzy-medium-blue to-aigentzy-deep-violet opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    initial={{ x: "-100%" }}
-                    whileHover={{ x: "0%" }}
-                    transition={{ duration: 0.3 }}
-                  />
-                  <span className="relative z-10 group-hover:text-white transition-colors duration-300">
-                    Early Access sichern
-                  </span>
+                  Beta sichern
                 </Button>
               </motion.div>
             </div>
