@@ -11,22 +11,26 @@ import FAQSection from '@/components/FAQSection';
 import FinalCTASection from '@/components/FinalCTASection';
 import Footer from '@/components/Footer';
 import ExitIntentPopup from '@/components/ExitIntentPopup';
+import AnimatedBackground from '@/components/AnimatedBackground';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <LandingNavigation />
-      <HeroSection />
-      <USPBar />
-      <BenefitsSection />
-      <CaseStudySection />
-      <HowItWorksSection />
-      <FeaturesSection />
-      <PricingTeaser />
-      <FAQSection />
-      <FinalCTASection />
-      <Footer />
-      <ExitIntentPopup />
+    <div className="min-h-screen bg-white relative">
+      <AnimatedBackground />
+      <div className="relative z-10">
+        <LandingNavigation />
+        <HeroSection />
+        <USPBar />
+        <BenefitsSection />
+        <CaseStudySection />
+        <HowItWorksSection />
+        <FeaturesSection />
+        <PricingTeaser />
+        <FAQSection />
+        <FinalCTASection />
+        <Footer />
+        <ExitIntentPopup />
+      </div>
     </div>
   );
 };
