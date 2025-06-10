@@ -66,9 +66,7 @@ const HeroSection = () => {
             duration: 1,
             delay: 0.8,
             ease: "easeOut"
-          }} className="text-3xl lg:text-4xl text-gray-700 leading-relaxed max-w-5xl mx-auto font-light py-0 my-0">
-              Aigentzy ist dein neuer Growth-Agent – powered by echten KI-Agenten.
-            </motion.p>
+          }} className="lg:text-4xl text-gray-700 leading-relaxed max-w-5xl mx-auto py-0 my-0 text-3xl font-light">Automatisiert. Persönlich. Endlich verständlich.</motion.p>
           </motion.div>
           
           {/* Product visualization with elegant design */}
