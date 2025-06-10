@@ -1,32 +1,24 @@
 
 import LandingNavigation from '@/components/LandingNavigation';
 import HeroSection from '@/components/HeroSection';
-import USPBar from '@/components/USPBar';
-import BenefitsSection from '@/components/BenefitsSection';
-import HowItWorksSection from '@/components/HowItWorksSection';
-import FeaturesSection from '@/components/FeaturesSection';
+import WhyAigentzySection from '@/components/WhyAigentzySection';
+import ProductStagingSection from '@/components/ProductStagingSection';
+import PerformanceSection from '@/components/PerformanceSection';
 import CaseStudySection from '@/components/CaseStudySection';
-import PricingTeaser from '@/components/PricingTeaser';
-import FAQSection from '@/components/FAQSection';
 import FinalCTASection from '@/components/FinalCTASection';
 import Footer from '@/components/Footer';
 import ExitIntentPopup from '@/components/ExitIntentPopup';
-import AnimatedBackground from '@/components/AnimatedBackground';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white relative">
-      <AnimatedBackground />
+    <div className="min-h-screen bg-black relative overflow-x-hidden">
       <div className="relative z-10">
         <LandingNavigation />
         <HeroSection />
-        <USPBar />
-        <BenefitsSection />
+        <WhyAigentzySection />
+        <ProductStagingSection />
+        <PerformanceSection />
         <CaseStudySection />
-        <HowItWorksSection />
-        <FeaturesSection />
-        <PricingTeaser />
-        <FAQSection />
         <FinalCTASection />
         <Footer />
         <ExitIntentPopup />
